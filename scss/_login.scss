@@ -1,0 +1,92 @@
+.login{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0f2a8d;
+    position: relative;
+    &__card{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 350px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 0;
+    }
+    &__logo-text{
+        text-align: center;
+        p{
+            font-size: 24px;
+            color: purple;
+            font-weight: 600;
+        }
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+        color: #aaa;
+        gap: 20px;
+        .inputfill{
+            position: relative;
+            label{
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 12px;
+                transition: .3s ease;
+                pointer-events: none;
+                span{
+                    font-size: 20px;
+                }
+            }
+            input{
+                background: transparent;
+                border: 1px solid #ccc;
+                width: 100%;
+                padding: 10px;
+                border-radius: 4px;
+                transition: .3s ease;
+                &:valid,
+                &:focus{
+                    border: 1px solid purple;
+                    color: purple;
+                }
+                &:valid + label,
+                &:focus + label{
+                    left: 0;
+                    color: purple;
+                    transform: scale(.9);
+                    top: -30%;
+                    background-color: #fff;
+                    padding: 0 5px;
+                }
+            }
+            button{
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                right: 10px;
+                background: transparent;
+            }
+        }
+        button{
+            padding: 8px 0;
+            color: #fff;
+            background-color: purple;
+            border-radius: 4px;
+            &:hover{
+                opacity: .8;
+            }
+        }
+    }
+}

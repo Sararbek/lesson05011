@@ -1,0 +1,51 @@
+.dashboard{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9fbfd;
+    &__card{
+        max-width: 300px;
+        width: 100%;
+        padding: 30px 0;
+        background-color: #fff;
+        box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        button{
+            padding: 8px 24px;
+            color: #fff;
+            background-color: purple;
+            border-radius: 4px;
+            &:hover{
+                opacity: .8;
+            }
+        }
+    }
+    &__card-image{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &__card-info{
+        text-align: center;
+        padding: 0 20px;
+        p{
+            margin: 3px 0;
+            text-transform: capitalize;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            cursor: pointer;
+            &:first-child{
+                font-weight: 500;
+            }
+        }
+    }
+}
